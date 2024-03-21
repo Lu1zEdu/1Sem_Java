@@ -1,31 +1,33 @@
+
 //Classe de execução => main
 public class CriarLivros {
     public static void main(String[] args) {
-        // Intanciando criar um objeto ==> Criar um objeto na memoria
-        // Tipo nomeObjeto
-        // Livro Favorito = new Livro()
+        //Instanciando um objeto => criar o objeto na memória
+        // tipoObjeto nomeObjeto = operadorInstanciação  construtor;
+        //   Livro      favorito =       new               Livro();
+        //Instanciar editora
+        Editora editora = new Editora();
+        editora.nome = "Harper Collins";
+        editora.representante = "Joao";
+                Livro favorito = new Livro("O Hobbit");
+        //favorito.titulo = "O Hobbit";
+        favorito.autor = "J. R. R. Talkien";
+        favorito.valor = 37.27;
+        favorito.editora = editora;
+        favorito.resumo = "Bilbo era um dos ...";
+        favorito.tipoCapa = "COMUM";
 
-        Livro favorito = new Livro();
+        System.out.println("Meu livro favorito é:" +
+        favorito.titulo + "\nSeu autor é: " + favorito.autor +
+        " preço: R$ " + favorito.valor);
+        System.out.println(favorito.exibirDados());
 
-        favorito.titulo = "O Hobbit";
-        favorito.autor = "J. R. R. Tolkien";
-        favorito.valor = 50.68;
-        favorito.editora = "Reinaldo José Lopes";
-        favorito.resumo ="Bilbo Bolseiro era ...";
-        favorito.paginas = 336;
-        favorito.tipoCapa = "CAPA DURA";
-
-        System.out.println("Meu livro Favorito é:" + favorito.titulo);
-        System.out.println("O autor do livro é : " + favorito.autor);
-        System.out.println("O preço do livro é : " + favorito.valor);
-        System.out.println("O numero de paginas é : " + favorito.paginas);
-        System.out.println("A editora do livro é : " + favorito.editora);
-
-        Livro meuLivro = new Livro();
-
-        String Titulodolivro;
-        System.out.println("Qual o nome do novo livro :");
-        String AutorDoLivro;
-        System.out.println("Qual o nome do autor do livro :");
+        Livro meuLivro = new Livro("UML 2.0",5);
+        //meuLivro.titulo = "UML 2.0";
+        meuLivro.valor = 58.98;
+        meuLivro.editora=editora;
+        //System.out.println("\n\nTitulo: " + meuLivro.titulo);
+        //System.out.println("Autor: " + meuLivro.autor);
+        System.out.println(meuLivro.exibirDados());
     }
 }
