@@ -9,7 +9,7 @@ public class Moeda {
     public double retornarCalculoConversao(){
         double dolar = this.valorReal/this.cotacaoDolar;
         return dolar;
-
+    }
     public String comprardolar(String cpf, String nome){
         this.calcularConversao();
         return "o cliente com cpf : " +
